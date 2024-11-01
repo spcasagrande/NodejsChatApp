@@ -1,7 +1,7 @@
 version: '3.3'
 services:
   chat:
-    image: 'spcasagrande/nodejschatapp'
+    image: 'spcasagrande/nodejschatapp:latest'
     environment:
       - "PORT:3700"
     ports:
