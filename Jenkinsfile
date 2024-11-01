@@ -8,6 +8,11 @@ stage('Cloning Git')
     checkout scm
 }
 
+stage('SCA-SAST-NodeJS-Chat-App-Testing')
+{
+    snykSecurity snykInstallation: 'Snyk', snykTokenId: 'snyk_api_token'
+}
+
 stage('Build-and-Tag')
 {
     /* This builds the actual image;
